@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .head {
+            width: 100%;
+            height: 200px;
+            background-color: aqua;
+            color: aqua;
+            text-shadow: 3px 3px 10px black,3px 3px 10px black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 40px;
+            text-align: center;
+            padding-top: 33px;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            display: inline-block;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li:hover {
+            background-color: rebeccapurple;
+            color: white;
+            cursor: pointer;
+        }
+
+        .about {
+            /* width: 304px; */
+            width: 23%;
+            height: 950px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background-color: rgba(128, 128, 128, 0.39);
+            position: relative;
+            float: left;
+            border: 2px solid black;
+        }
+
+        .m {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+            text-align: center;
+           color: aliceblue;
+            text-shadow: 3px 3px 10px black,3px 3px 10px black;
+        }
+
+        .n {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: inline-block;
+            color: aliceblue;
+            text-shadow: 3px 3px 10px black,3px 3px 10px black;
+        }
+
+        .o {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            /* display: inline-block; */
+            text-align: center;
+            padding-top: 10px;
+            color: aliceblue;
+            text-shadow: 3px 3px 10px black,3px 3px 10px black;
+        }
+
+        .j {
+            width: 270px;
+            height: 330px;
+        }
+
+        .f {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(3px 3px 10px white) drop-shadow(-3px -3px 10px black);
+        }
+
+        .r {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: aliceblue;
+            text-shadow: 3px 3px 10px black,3px 3px 10px black;
+        }
+
+        .c {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .d {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: 25px;
+        }
+
+        .k {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .gr {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: 25px;
+        }
+
+        section {
+            width: 76.7%;
+            height: 946px;
+            /* background-color: rgba(180, 176, 176, 0.432); */
+            background-color: rgba(154, 121, 187, 0.726);
+            border: 2px solid black;
+        }
+
+        .edu {
+            text-align: center;
+            padding-top: 7px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 40px;
+            /* color: rgba(154, 121, 187, 0.726);
+            text-shadow: 5px 5px 8px white; */
+            color: white;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        .ho {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            color: white;
+            padding-left: 5px;
+            color: white;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        .pr {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: 25px;
+            text-align: justify;
+            padding: 5px;
+            text-shadow: 2px 2px 5px white;
+        }
+
+        .lab {
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            width: 600px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .inter {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            color: white;
+            margin-top: 10px;
+            padding-left: 5px;
+            color: white;
+            text-shadow: 5px 5px 5px black;
+        }
+
+        .lo {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: 25px;
+            text-align: justify;
+            padding: 5px;
+            text-shadow: 2px 2px 5px white;
+        }
+
+        .cl {
+            display: block;
+            margin: auto;
+            margin-top: 50px;
+            width: 600px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        @media screen and (min-width:1100px) and (max-width:1330px) {
+            section {
+                width: 76.6%;
+            }
+
+        }
+
+        @media screen and (min-width:800px) and (max-width:1100px) {
+            .about {
+
+                width: 25%;
+                height: 1070px;
+            }
+
+            .j {
+                width: 200px;
+            }
+
+            section {
+                width: 74.5%;
+                height: 1066px;
+            }
+        }
+
+        @media screen and (min-width:665px) and (max-width:800px) {
+            section {
+                width: 66.4%;
+                height: 1176px;
+            }
+
+            .lab {
+                width: 400px;
+            }
+
+            .cl {
+                width: 400px;
+            }
+            .edu{
+font-size: 25px;
+            }
+            .ho{
+                font-size: 20px;
+            }
+            .inter{
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (min-width:500px) and (max-width:665px) {
+            section {
+                width: 66.2%;
+                height: 1175px;
+            }
+
+            .lab {
+                width: 250px;
+            }
+
+            .cl {
+                width: 250px;
+            }
+        }
+
+        @media screen and (min-width:500px) and (max-width:800px) {
+            .head {
+                font-size: 30px;
+                /* color: white; */
+                height: 150px;
+            }
+
+            li {
+                padding: 10px;
+            }
+
+            .about {
+                width: 33%;
+                height: 1180px;
+            }
+
+            .j {
+                width: 170px;
+                margin: auto;
+            }
+.r{
+    font-size: 25px;
+}
+            .m {
+                font-size: 20px;
+            }
+
+            .n {
+                font-size: 20px;
+            }
+
+            .o {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (min-width:0px) and (max-width:500px) {
+            .head {
+                font-size: 20px;
+                /* color: white; */
+                height: 100px;
+            }
+
+            .nav {
+                width: 100%;
+            }
+
+            li {
+                font-size: 15px;
+                padding: 10px;
+                /* width: 100%; */
+            }
+
+            .about {
+                width: 100%;
+            }
+
+            .j {
+                margin: auto;
+            }
+
+            .m {
+                font-size: 20px;
+            }
+
+            .n {
+                font-size: 20px;
+                margin-left: 20px;
+            }
+
+            .o {
+                font-size: 20px;
+            }
+
+            section {
+                width: 100%;
+                height: 1150px;
+            }
+
+            .lab {
+                width: 350px;
+            }
+
+            .cl {
+                width: 350px;
+            }
+        }
+        @media screen and (min-width:270px) and (max-width:360px){
+            .lab{
+                width: 200px;
+            }
+            .cl{
+                width:200px ;
+            }
+            section{
+                height: 1300px;
+            }
+        }
+        @media screen and (min-width:150px) and (max-width:270px){
+            .lab{
+                width: 150px;
+                height: 150px;
+            }
+            .cl{
+                width:150px;
+                height: 150px;
+            }
+            section{
+                width: 270.5px;
+                height: 1320px;
+            }
+            .j{
+                width: 100px;
+            }
+            .about{
+                height: 1150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="head">
+            Welcome <br>
+            A-H Website
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href=""></a>Home</li>
+                <li><a href=""></a>About</li>
+                <li><a href=""></a>Image Gallery</li>
+                <li><a href=""></a>Contact</li>
+            </ul>
+        </div>
+
+        <div class="about">
+            <h1 class="m">About me</h1>
+            <h1 class="n">I am</h1>
+            <h1 class="o">M Abu Hurairah</h1>
+            <div class="j"><img class="f" src="pic.png" alt=""></div>
+            <h1 class="r">Skills</h1>
+            <h3 class="c">WEb Developer:</h3>
+            <p class="d">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M.
+                Abu Hurairah is a web developer passionate about creating dynamic and responsive web applications,
+                currently building a Netflix clone. Skilled in front-end and back-end development, he focuses on
+                crafting user-friendly digital experiences.</p><br>
+            <h3 class="k">Graphic Designer:</h3>
+            <p class="gr">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M.
+                Abu Hurairah is a creative graphic designer offering professional design services, specializing in
+                eye-catching visuals and effective branding solutions.</p>
+        </div>
+        <section>
+            <h1 class="edu">Education</h1>
+            <div class="ho">Matric:</div>
+            <p class="pr">
+                M. Abu Hurairah completed matriculation in Computer Science from Laboratory High School PARS Campus
+                between 2019 and 2021, scoring over 1050 out of 1100 with an A+ grade. He aims to pursue a career in
+                technology.
+            </p>
+            <img class="lab"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxEJ1bSSOKp9YES1YcXhQWpnln7A7LskQsQ&s"
+                alt="">
+            <div class="inter">Intermediate:</div>
+            <p class="lo">Here's the corrected version:
+
+                Mohammad Abu Hurairah completed ICS from Punjab College, Jhang Road Campus, from 2021 to 2023, with an
+                A+ grade. After gaining knowledge of the C programming language, he developed an interest in coding.
+                Consequently, he joined the University of Central Punjab, Faisalabad Campus, to further his technical
+                knowledge and aims to become a successful Software Engineer in the future, Insha'Allah.</p>
+            <img class="cl"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTu-a30RKVJ3a5OVHgO2-Vw6r2DTQj8ZfJg&s"
+                alt="">
+        </section>
+    </div>
+</body>
+
+</html>
